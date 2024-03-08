@@ -8,14 +8,14 @@ const Home = () => {
 	const [hastalar, setHastalar] = useState(hastaData);
 	const [show, setShow] = useState(true);
 
-	const doctorClick = () => {
+	const doctorClick = (idD) => {
 		setShow(!show);
-		set;
+		setDoctors(show ? doctors.filter((a) => a.id === idD) : doctorData);
 	};
 
 	return (
 		<div>
-			<main>
+			<main className="main">
 				<div className="doctors">
 					{doctors.map((dr) => (
 						<div key={dr.id}>
@@ -28,7 +28,7 @@ const Home = () => {
 								alt=""
 								width="150px"
 								height="225px"
-								onClick={() => doctorClick(dr)}
+								onClick={() => doctorClick(dr.id)}
 							/>
 							<h4
 								style={{
@@ -45,19 +45,23 @@ const Home = () => {
 						display: show ? "block" : "flex",
 					}}
 				>
-					<div>
-						{!show && (
-							<AddPatient
+					<div className="add-list">
+						<div>
+							{!show && (
+								<AddPatient
+									hastalar={hastalar}
+									setHastalar={setHastalar}
+									doctors={doctors}
+								/>
+							)}
+						</div>
+						<div>
+							<PatientList
 								hastalar={hastalar}
 								setHastalar={setHastalar}
+								doctors={doctors}
 							/>
-						)}
-					</div>
-					<div>
-						<PatientList
-							hastalar={hastalar}
-							setHastalar={setHastalar}
-						/>
+						</div>
 					</div>
 				</div>
 			</main>

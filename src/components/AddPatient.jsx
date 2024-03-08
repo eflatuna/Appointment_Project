@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddPatient = ({ hastalar, setHastalar }) => {
+const AddPatient = ({ hastalar, setHastalar, doctors }) => {
 	const [hastaName, setHstName] = useState("");
 	const [date, setDate] = useState("");
 
@@ -14,7 +14,7 @@ const AddPatient = ({ hastalar, setHastalar }) => {
 				text: hastaName,
 				day: date,
 				bittiMi: false,
-				doktor: "oya",
+				doktor: doctors[0].doctorName,
 			},
 		]);
 
@@ -48,7 +48,8 @@ const AddPatient = ({ hastalar, setHastalar }) => {
 					</div>
 					<div>
 						<button className="btn btn-submit" type="submit">
-							Create Registration for <span></span>
+							Create Registration for{" "}
+							<span>{doctors[0].doctorName}</span>
 						</button>
 					</div>
 				</form>
