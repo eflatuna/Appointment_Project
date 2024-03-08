@@ -60,7 +60,7 @@ a {
 .add-list {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	margin: auto;
 	margin-bottom: 50px;
 
@@ -105,13 +105,6 @@ h4 {
 	align-items: center;
 	justify-content: center;
 }
-
-/* .container {
-	background-image: url("./helper/images/productimage_large.jpg");
-	background-position: center;
-	background-size: cover;
-	padding: 2rem;
-} */
 
 /************** Hasta Ekle *********/
 
@@ -173,19 +166,25 @@ h4 {
 	margin: 5px;
 	padding: 10px 20px;
 	cursor: pointer;
-	max-width: 400px;
+	max-width: 350px;
+
 	border-radius: 5px;
 }
 
 .trueStyle {
 	border-left: 10px solid #2260ff;
-	/* margin-inline: 250px; */
+	margin-inline: 250px;
 	text-decoration: line-through;
 	background-color: #cad6ff;
 	max-width: 350px;
+
+	padding: 5px 5px;
 	border-radius: 5px;
-	margin: 30px;
+	margin: 5px;
 }
+
+/**********Footer*************/
+
 footer {
 	width: 100%;
 	padding-block: 50px 20px;
