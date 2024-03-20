@@ -1,5 +1,5 @@
 
-# Project-04 : Appointment App 
+# Appointment App 
 
 ## Description
 
